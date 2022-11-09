@@ -9,6 +9,7 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.create(task_params)
+    flash[:notice] = "タスクが作成されました"
     redirect_to tasks_path
   end
 
